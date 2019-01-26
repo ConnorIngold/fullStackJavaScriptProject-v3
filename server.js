@@ -10,7 +10,7 @@ app = express();
 app.use(serveStatic(__dirname + "/client/dist"));
 
 // app.use has to come after setting app to express
-app.use(morgan(dev));
+app.use(morgan('combined'));
 
 const port = process.env.PORT || 5000;
 app.listen(port);
